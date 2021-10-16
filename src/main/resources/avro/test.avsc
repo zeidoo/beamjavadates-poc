@@ -1,0 +1,17 @@
+{
+  "namespace": "org.apache.beam.sdk.schemas",
+  "type": "record",
+  "name": "TestAvro",
+  "fields": [
+    { "name": "dateOuter", "type": {"type": "int", "logicalType": "date"} },
+    { "name": "row", "type": ["null", {
+     "type": "record",
+     "name": "TestAvroNested",
+      "fields": [
+        { "name": "dateInner", "type": {"type": "int", "logicalType": "date"} }
+         ]
+       }]
+    }
+  ]
+}
+
